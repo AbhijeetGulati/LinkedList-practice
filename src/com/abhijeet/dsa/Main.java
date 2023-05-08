@@ -132,8 +132,17 @@ public class Main {
 
     }
     //middle of linked list
+    //middle of linked list
     public ListNode middleNode(ListNode head) {
-
+        ListNode slow=head;
+        ListNode fast=head;
+        while(fast!=null && fast.next!=null){
+            //move both pointers
+            //slow position in end will give us the middle of linked list
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        return slow;
     }
 
     public ListNode deleteDuplicates(ListNode head) {
